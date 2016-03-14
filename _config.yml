@@ -12,6 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   This is the writings of Richard Brown. I am Chairman of the openSUSE Board
   and Technical Lead for openQA at SUSE. This site is my personal blog.
   The opinions expressed here represent my own and not those of my employer.
+  Copyright (c) 2016 Richard Brown
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://rootco.de" # the base hostname & protocol for your site
 twitter_username: sysrich
