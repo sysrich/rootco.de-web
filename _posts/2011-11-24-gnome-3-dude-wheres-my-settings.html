@@ -1,0 +1,43 @@
+---
+layout: post
+status: publish
+published: true
+title: 'GNOME 3: Dude where''s my settings?'
+author:
+  display_name: sysrich
+  login: sysrich
+  email: RBrownCCB@opensuse.org
+  url: ''
+author_login: sysrich
+author_email: RBrownCCB@opensuse.org
+wordpress_id: 18
+wordpress_url: http://www.sysrich.co.uk/?p=18
+date: '2011-11-24 23:44:18 +0100'
+date_gmt: '2011-11-24 23:44:18 +0100'
+categories:
+- openSUSE
+- GNOME
+tags:
+- openSUSE
+- GNOME
+- GNOME3
+- customisation
+- settings
+---
+<p>I'm a big fan of GNOME 3, but it does frustrate me to find settings I used to rely on suddenly missing from the standard configuration tools like System Settings</p>
+<p>When testing openSUSE 12.1 I spent a lot of my time testing power, shutdown and suspend related issues</p>
+<p>In previous versions, the default behaviour when pressing the hardware power button had been to show the user the power down menu with Reset, Shutdown, etc as options.</p>
+<p>When upgrading a machine from earlier openSUSE versions I noticed that this behaviour was kept, but fresh installs used a new default, Suspend</p>
+<p><strong>seriously?</strong> Do I really need to have lid close, keyboard suspend button, my hardware power button, and the only visible power option in the default status menu <strong>all</strong> for suspending?<br />
+<em>(Note: in openSUSE 12.1 we use the alternate status menu shell extension to make Shutdown and Hibernate options easier to find)</em></p>
+<p>In earlier GNOMEs all I had to do to change the behaviour of the power button was fire up <strong>System Settings &gt; Power</strong></p>
+<p>But in GNOME 3.2 there is a lovely blank grey area where that lovely setting used to be....</p>
+<p>[caption id="attachment_25" align="alignnone" width="677" caption="You left a hole where my options should be"]<a href="https://sysrich.co.uk/wp-content/uploads/2011/11/Dude.png"><img class="size-full wp-image-25 " title="Dude" src="https://sysrich.co.uk/wp-content/uploads/2011/11/Dude.png" alt="" width="677" height="387" /></a>[/caption]</p>
+<p>As my experience with upgrades shows, GNOME still has the settings, they're just hidden away in dconf, GNOMEs 'registry-like' configuration system.</p>
+<p>The power button settings are hidden away under the dconf key <strong>/org/gnome/settings-daemon/plugins/power/button-power </strong>which you can change with the following command</p>
+<pre>gsettings set org.gnome.settings-daemon.plugins.power button-power 'interactive'</pre>
+<p>If you're like me and would like to fine tune your machine while still enjoying all the cool stuff in GNOME 3 I can recommend you install <strong>dconf-editor</strong>, which makes it pretty easy to explore the many settings hidden away that can help you get your GNOME session 'just right'</p>
+<p>If you're an openSUSE user, installing is as complicated as</p>
+<pre>zypper in dconf-editor</pre>
+<p>[caption id="attachment_26" align="alignnone" width="802" caption="Ahh, there you are.."]<a href="https://sysrich.co.uk/wp-content/uploads/2011/11/Power.png"><img class="size-full wp-image-26" title="Power" src="https://sysrich.co.uk/wp-content/uploads/2011/11/Power.png" alt="" width="802" height="1049" /></a>[/caption]</p>
+<p>Please, upstream developers, you're doing wonderful beautiful things in GNOME 3, and making it simpler is great, but please don't forget we need an operating system to help put us in control of our hardware, not the other way around..</p>
