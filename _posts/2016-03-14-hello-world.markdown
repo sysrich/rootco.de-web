@@ -5,7 +5,7 @@ date:   2016-03-14 04:38:55 +0100
 ---
 openQA Code Example
 
-Test
+This is a test, just playing around
 
 {% highlight perl %}
 use base "consoletest";
