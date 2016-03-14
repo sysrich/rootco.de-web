@@ -5,8 +5,6 @@ date:   2016-03-14 04:38:55 +0100
 ---
 openQA Code Example
 
-This is a tiny pointless edit to ensure deploying works
-
 {% highlight perl %}
 use base "consoletest";
 use testapi;
