@@ -1,22 +1,8 @@
 ---
 layout: post
-status: publish
-published: true
 title: Testing Fedora with openQA
-author:
-  display_name: sysrich
-  login: sysrich
-  email: RBrownCCB@opensuse.org
-  url: ''
-author_login: sysrich
-author_email: RBrownCCB@opensuse.org
-wordpress_id: 303
-wordpress_url: https://sysrich.co.uk/?p=303
 date: '2014-12-23 14:43:00 +0100'
-date_gmt: '2014-12-23 13:43:00 +0100'
 categories:
-- openSUSE
-- Fedora
 - openQA
 tags: []
 ---
@@ -62,7 +48,6 @@ send_key 'ret';
 <p>[embed]https://www.youtube.com/watch?v=Rbjax-wLJcY[/embed]</p>
 <p>It wasn't perfect though, no QA tool is any good if it doesn't find bugs - luckily even these really simple tests were able to reliably reproduce a <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1147670">known issue in anaconda</a> which apparently had been causing problems since October and hasn't yet been fixed.</p>
 <p>Wanting to prove the tests and needles were generic enough that they could be reused for future testing, I've also run these against a recent Rawhide build.</p>
-<p><a href="https://sysrich.co.uk/wp-content/uploads/2014/12/FedoraTest.png"><img class="aligncenter size-medium wp-image-307" src="https://sysrich.co.uk/wp-content/uploads/2014/12/FedoraTest-300x112.png" alt="FedoraTest" width="300" height="112" /></a></p>
 <p>Everything looks really promising, but a bug in <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1176411">Rawhide with Keyboard Shortcuts </a>needs to be fixed before my tests can complete a full run.</p>
 <p>Not bad for a few hours work if I say so myself, and I'd really like it if other people want to pick up where I've left off and extend these tests to provide more comprehensive coverage.</p>
 <h3>I'm interested, where can I find out more?</h3>
