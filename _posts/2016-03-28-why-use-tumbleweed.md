@@ -77,7 +77,7 @@ Since then, the adoption rate of Tumbleweed has been nothing short of astronomic
 
 If [public numbers are to be believed](https://www.archlinux.de/?page=UserStatistics) Tumbleweed might already be larger than 'more famous' rolling distributions. Whether or not that's true doesn't change one fact - **We want YOU to try Tumbleweed**.
 
-And you'll be in good company. Not only amongst those users, but companies like [SoftIron](http://softiron.co.uk/) who ship Tumbleweed on their Overdrive 3000 64-bit ARM servers, and [Fujitsu](http://ts.fujitsu.com) who offer Tumbleweed as their chosen community Linux to customers with Skylake hardware.
+And you'll be in good company. Not only amongst those users, but companies like [SoftIron](http://softiron.co.uk/) who ship Tumbleweed on their Overdrive 3000 64-bit ARM servers, and [Fujitsu](http://ts.fujitsu.com) who offer Tumbleweed as their chosen community Linux to customers with Skylake hardware. [GNOME](http://www.gnome.org) advertise Tumbleweed-based GNOME:Next LiveCD's so [their users can play with their latest releases as soon as they are shipped](https://mail.gnome.org/archives/gnome-announce-list/2016-March/msg00059.html), even before the tested packages appear in Tumbleweed properly.
 
 I may be biased, but Tumbleweed is the only rolling distribution I'd recommend to _any_ Linux enthusiast as their daily driver.
 
