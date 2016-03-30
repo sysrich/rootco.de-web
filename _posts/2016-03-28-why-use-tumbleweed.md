@@ -21,7 +21,7 @@ Tumbleweed is built like a 'traditional' distribution. All packages in Tumblewee
 
 But where as traditional distributions take days, sometimes weeks to do such, we do it in hours, because we have the Open Build Service.
 
-* You can learn more about [Open Build Service HERE](http://openbuildservice.org/)
+* You can learn more about [Open Build Service HERE.](http://openbuildservice.org/)
 * You can see, and use the [openSUSE Build Service](http://build.opensuse.org) for free, today.
 
 This produces a 'snapshot'. At this point a traditional distribution would probably call this a 'release candidate', an ISO and a set of repositories with all the software built and ready for testing.
