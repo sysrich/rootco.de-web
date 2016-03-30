@@ -17,7 +17,7 @@ It's more like Arch and Gentoo in that regard. Tumbleweed today contains the lat
 But, unlike other rolling distributions, Tumbleweed does it smarter.
 
 # Built Correctly
-Tumbleweed is built like a 'traditional' distribution. All packages in Tumbleweed are built together as a cohesive distribution, and shipped together as a cohesive distribution. If a new package in checked in that potentially can invalidate another package (eg. new glibc, new libraries, new kernel, etc) then the dependant packages are rebuilt, just like traditional distributions.
+Tumbleweed is built like a 'traditional' distribution. All packages in Tumbleweed are built together as a cohesive distribution, and shipped together as a cohesive distribution. If a new package is checked in that potentially can invalidate another package (eg. new glibc, new libraries, new kernel, etc) then the dependant packages are rebuilt, just like traditional distributions.
 
 But where as traditional distributions take days, sometimes weeks to do such, we do it in hours, because we have the Open Build Service.
 
