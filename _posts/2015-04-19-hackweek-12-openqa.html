@@ -37,9 +37,9 @@ We made life easy for ourselves by creating two disk images (one for SLES 12 and
 <p>These images were created following the regular <a href="http://os-autoinst.github.io/openQA/documentation/">openQA Documentation</a> and setup to test a 'known good' Distribution with a static set of tests (openSUSE 13.2 with the tests and needles from <a href="https://github.com/os-autoinst">our GitHub project</a>)</p>
 <p>We then configured openQA to treat this disk image as a different 'distribution', and we wrote new tests for testing openQA (See the source code <a href="https://github.com/os-autoinst/os-autoinst-distri-openQA">HERE</a>)</p>
 <p>A little bit of 'needling' later (Capturing the reference screenshots and defining the areas of interest to openQA, which can be found <a href="https://github.com/os-autoinst/os-autoinst-needles-openQA">HERE</a>) we had a working test run which was able to test openQA running on openSUSE 13.2</p>
-<p><a href="https://www.youtube.com/watch?v=xdgaItRe9Kg">YouTube</a></p>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/xdgaItRe9Kg" frameborder="0" allowfullscreen></iframe></p>
 <p>and also for testing openQA on SLES 12</p>
-<p><a href="https://www.youtube.com/watch?v=MPScqm3iMSk">YouTube</a></p>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/MPScqm3iMSk" frameborder="0" allowfullscreen></iframe></p>
 <p>These tests successfully test all the core functionality of openQA, including Upgrading from the official OBS repository, Confirming the Worker is running, Scheduling an openQA job from the shell, Confirming a Job is running from the shell, and checking the functionality of each of the UI Screens by loading up Firefox and clicking on all of the links just like a user would.</p>
 <p>With this development, we now have a way of confirming that new builds of openQA are safe for deployment in production, which should help us be a little more fearless and rapid updating the openQA versions in use for testing openSUSE and SUSE Linux Enterprise, even when during heavy testing periods.</p>
 <p>Expect to see these tests running on the public <a href="http://openqa.opensuse.org">http://openqa.opensuse.org </a>soon.. I just need to figure out an elegant way of triggering them automatically as soon as OBS has new RPMs for testing.</p>

@@ -14,10 +14,10 @@ I plan to get back to blogging more often about the goings on in my world, espec
 And just to give Jekyll a bit of a stretch on my first real post, here's an openQA code snippit from Frederic Crozat's recent submission to
 [openQA](https://github.com/os-autoinst/os-autoinst-distri-opensuse)
 
-{% highlight perl %}
+```perl
     select_console 'root-console';
     save_screenshot;
-
+    
     script_run "cat /home/*/.xsession-errors* > /tmp/XSE.log";
     upload_logs "/tmp/XSE.log";
     save_screenshot;
@@ -31,4 +31,5 @@ And just to give Jekyll a bit of a stretch on my first real post, here's an open
     save_screenshot;
 
     script_run "ps axf > /tmp/psaxf.log";
-{% endhighlight %}
+```
+

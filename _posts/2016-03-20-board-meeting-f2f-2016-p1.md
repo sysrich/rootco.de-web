@@ -105,7 +105,7 @@ software.opensuse.org serves two very important roles, both as the
 main download portal for our distributions, and as a software search
 for OBS
 
-**PROPOSAL:** Split software.opensuse.org to have the download portal and
+**PROPOSAL:** Split http://software.opensuse.org to have the download portal and
 search separate.
 
  The download portal could be a simple, clean, fast, static site that

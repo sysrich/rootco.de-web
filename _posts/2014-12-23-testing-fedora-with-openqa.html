@@ -12,7 +12,8 @@ tags: []
 <p>openQA is a fully featured <strong>operating system</strong> testing tool.</p>
 <p>It takes an operating system ISO or Disk Image, and using its Domain Specific Language (DSL) conducts a series of tests consisting of keyboard and mouse inputs while analysing the screen output for specific matches (called 'needles') to ensure the operating system is behaving as intended.</p>
 <p>A typical, simple example of an openQA test for looks like this</p>
-<pre>#Header, doesn't normally need to be changed
+<pre>
+#Header, doesn't normally need to be changed
 use base "basetest";
 use strict;
 use testapi;
@@ -40,12 +41,12 @@ send_key 'ret';
 <h3>Yeah, right...prove it.</h3>
 <p>I haven't been working on openQA for a very long time. For a few weeks I've been working on new openQA tests for openSUSE and SUSE Linux Enterprise, but as we already have a huge collection of tests in <a href="https://github.com/os-autoinst/os-autoinst-distri-opensuse">our public git repository</a>, a good number of my new tests are borrowing code and ideas from our existing test library.</p>
 <p>So I got wondering, how hard is it to test a totally differing operating system, with a totally different installation workflow?</p>
-<p>So, after reading the recent <a href="http://www.theregister.co.uk/2014/12/18/fedora_21_review/">Register review of Fedora 21</a> that had a subtitle mentioning 'install woes', I decided to pick on our friends at the <a href="Fedora%20Project">Fedora Project</a> and downloaded a copy of Fedora 21 Workstation.</p>
+<p>So, after reading the recent <a href="http://www.theregister.co.uk/2014/12/18/fedora_21_review/">Register review of Fedora 21</a> that had a subtitle mentioning 'install woes', I decided to pick on our friends at the <a href="http://getfedora.org">Fedora Project</a> and downloaded a copy of Fedora 21 Workstation.</p>
 <p>'Designing' tests for openQA is easy. I fired up the ISO in a VM and kept notes on which screens would make good needles and which keys to press. Each of the screens became an 'assert_screen' call in my tests, and each keypress became a 'send_key'.</p>
 <p><em>NOTE: I could have used openQA's 'assert_and_click' function to check the screen for a needled area and click in the middle of it - it's a great for pressing buttons, but I decided to take a very keyboard centric approach.</em></p>
 <p>In a few hours I had thrown together a basic set of tests, which you can get on <a href="https://github.com/sysrich/os-autoinst-distri-fedora">GitHub</a></p>
 <p>These tests successfully complete a full installation of Fedora 21 Workstation, as you can see from the openQA-produced Video I uploaded to YouTube</p>
-<p>[embed]https://www.youtube.com/watch?v=Rbjax-wLJcY[/embed]</p>
+<p><iframe width="420" height="315" src="https://www.youtube.com/embed/Rbjax-wLJcY" frameborder="0" allowfullscreen></iframe></p>
 <p>It wasn't perfect though, no QA tool is any good if it doesn't find bugs - luckily even these really simple tests were able to reliably reproduce a <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1147670">known issue in anaconda</a> which apparently had been causing problems since October and hasn't yet been fixed.</p>
 <p>Wanting to prove the tests and needles were generic enough that they could be reused for future testing, I've also run these against a recent Rawhide build.</p>
 <p>Everything looks really promising, but a bug in <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1176411">Rawhide with Keyboard Shortcuts </a>needs to be fixed before my tests can complete a full run.</p>
