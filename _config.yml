@@ -79,10 +79,12 @@ url-pretty: "rootco.de"  # eg. "deanattali.com/beautiful-jekyll"
 
 # Output options (more information on Jekyll's site)
 timezone: "Europe/Berlin"
-markdown: kramdown
+markdown: redcarpet
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
+redcarpet:
+  extensions: ["tables", "autolink", "strikethrough", "superscript", "underline", "highlight", "no_intra_emphasis", "space_after_headers"]
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
