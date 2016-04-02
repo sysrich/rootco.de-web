@@ -73,7 +73,7 @@ That's not universally true though, good testing finds bugs, those bugs need to 
 # Trusted by More and More
 Most of what I describe above was implimented after July 2014 and culminated in the ['merger' of Old Tumbleweed and Factory in November 2014](https://news.opensuse.org/2014/10/24/tumbleweed-factory-rolling-releases-to-merge/).
 
-Since then, the adoption rate of Tumbleweed has been nothing short of astronomical.. ![Look at those numbers](/pics/Tumbleweedstats.png).
+Since then, the adoption rate of Tumbleweed has been nothing short of astronomical.. ![Look at those numbers](/pics/Tumbleweedstats.png)
 
 If [public numbers are to be believed](https://www.archlinux.de/?page=UserStatistics) Tumbleweed might already be larger than 'more famous' rolling distributions. Whether or not that's true doesn't change one fact - **We want YOU to try Tumbleweed**.
 
