@@ -8,6 +8,9 @@ bigimg:
   - "/pics/oSC/osc12-2.jpg" : "openSUSE Conference 2012 - Prague"
   - "/pics/oSC/osc13.jpg" : "openSUSE Conference 2013 - Thessaloniki"
   - "/pics/oSC/osc14.jpg" : "openSUSE Conference 2014 - Dubrovnik"
+  - "/pics/Beer.jpg" : "openSUSE Board Meeting 2015 - Nuremberg"
+  - "/pics/oSAsia/osasia14.jpg" : "openSUSE Asia 2014 - Beijing"
+  - "/pics/oSAsia/osasia142.jpg" : "openSUSE Asia 2014 - Beijing"
 ---
 The [openSUSE Project](http://www.opensuse.org) is awesome. We're doing facinating stuff that is treading new ground in the world of Free and Open Source Software.  
 If you're interested in how and why we're doing this stuff, if you'd like to get involved, then **this blog post is for you**.  
