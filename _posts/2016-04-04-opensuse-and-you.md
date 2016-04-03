@@ -60,7 +60,7 @@ Don't expect someone else to do it. Don't think it is someone else's job to fix.
 And don't expect anyone else to tell you what to do or what needs doing - volunteers are rarely motivated when given orders from others, so that just isn't typically the openSUSE way.  
 That said, I do believe we could do with having some indications of particular areas where we need help; The new [openSUSE Mentoring website](https://opensuse.github.io/mentoring/) is a perfect example of something the Project now has to solve that problem.
 
-In the highly unlikely event that you think everything is wonderful and there is nothing that annoys you, but you still want to give something back to the openSUSE project, then dig a little deeper, try something new, either technically in our products, or get involved ina new aspect of the Project that interests you.  
+In the highly unlikely event that you think everything is wonderful and there is nothing that annoys you, but you still want to give something back to the openSUSE project, then dig a little deeper, try something new, either technically in our products, or get involved in a new aspect of the Project that interests you.  
 I guarantee you'll find something somewhere which could do with your help.
 
 # How to get started? <a name="Starting"></a>
@@ -68,8 +68,8 @@ So, you've picked something to work on, how to get started. Here is my advice.
 
 ### Do your homework
 Make sure you understand the topic you are tackling. Dig through the problem to make sure you haven't missed something.  
-Read our wiki pages on the topic. Use Google. Look at how other FOSS Projects deal with the problem. Is their solution better or worse that what you are thinking?  
-Talk to people who might know stuff about the topic, and bounce your ideas off them. Our IRC channels are a goodplace for such discussions, as are events like our [openSUSE Conferences](http://events.opensuse.org).
+Read our wiki pages on the topic. Use Google. Look at how other FOSS Projects deal with the problem. Is their solution better or worse than what you are thinking?  
+Talk to people who might know stuff about the topic, and bounce your ideas off them. Our IRC channels are a good place for such discussions, as are events like our [openSUSE Conferences](http://events.opensuse.org).
 
 ### Plan your solution
 You've decided what you want to do, now you need to decide how you intend to do it.  
