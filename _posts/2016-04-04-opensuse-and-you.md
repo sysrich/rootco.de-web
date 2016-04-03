@@ -5,7 +5,7 @@ subtitle: Contributing to our Project
 date: '2016-04-03 02:00:00'
 bigimg:
   - "/pics/oSC/osc11.jpg" : "openSUSE Conference 2011 - Nuremberg"
-  - "/pics/oSC/osc12-2.jpg" : "openSUSE Conference 2012 - Prague"
+  - "/pics/oSC/osc12.jpg" : "openSUSE Conference 2012 - Prague"
   - "/pics/oSC/osc13.jpg" : "openSUSE Conference 2013 - Thessaloniki"
   - "/pics/oSC/osc14.jpg" : "openSUSE Conference 2014 - Dubrovnik"
   - "/pics/Beer.jpg" : "openSUSE Board Meeting 2015 - Nuremberg"
