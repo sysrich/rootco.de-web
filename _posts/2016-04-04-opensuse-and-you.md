@@ -29,7 +29,7 @@ For those who have read "The Cathedral and the Bazaar", openSUSE is very much a 
 The Project does have the [openSUSE Board](https://en.opensuse.org/openSUSE:Board), who's role is to *'lead'* the Project by acting as a central point of contact and conflict resolution.
 In other words, they help keep everyone in the loop with what everyone else is doing, help resolve any conflicts that arise, and act as the 'decision makers of _last resort_' in situations where decisions need to be made and there is no one else available or willing to do so.  
 The Board is a little like the ['A-Team'](https://www.youtube.com/watch?v=N1HMCArgqWM) -  If you have a problem, if no one else can help, then the Board is there for you, either to help out, or help you find better help elsewhere.
-The Board is elected by the [openSUSE Members](https://en.opensuse.org/openSUSE:Members), those contributorswho have demonstrated sustained and substantial contributions to the Project.
+The Board is elected by the [openSUSE Members](https://en.opensuse.org/openSUSE:Members), those contributors who have demonstrated sustained and substantial contributions to the Project.
 
 [SUSE](http://www.suse.com) are the primary sponsor of the openSUSE Project. All SUSE employees are encouraged to contribute to the openSUSE Project. These contributions are carried out as 'peers';  
 No special treatment is granted to SUSE employees, in fact the employer of a contributor should be irrelevant within the openSUSE Project.  
