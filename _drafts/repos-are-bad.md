@@ -3,7 +3,7 @@
 
 (SLE) Enterprise Stability Rule - **"In order to preserve stability, you must change as little as possible."**
 
-Unified Stability/Reliability Model - **"Changing software stacks while maintaining a static base system can only be achieved at either the cost of stability, reliability, or by accepting a slower pace or scope of change."**
+Unified Stability/Reliability Model - **"Changing software stacks while maintaining a static base system can only be achieved at either the cost of stability, reliability, or by accepting a measured pace or scope of change."**
 
 Leap - **"In order to find balance between stability, reliability, and pace of change, you must change little or nothing during a minor release. In new minor releases, small to moderate changes should be considered, while preserving users expectations of functionality. Major change should be reserved for new major version releases."**
 
