@@ -1,3 +1,12 @@
+Show typical dependancy problem
+
+Show more complicated problem with 2-3 addon repos
+
+Show how containers don't necessary fix that
+
+Show how they fix it only if they contain mini distributions
+
+Show how that is a security nightmare
 
 Tumbleweed Rolling Reliability Paradox - **"In order to change some things quickly while staying reliable, you must be able to change ALL things quickly."**
 
