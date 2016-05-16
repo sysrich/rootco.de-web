@@ -53,7 +53,7 @@ I then sanity checked the contents of `/opt/certbot` before proceeding. I really
 $ /opt/certbot/certbot-auto certonly --webroot -w /srv/www/htdocs \
 -d rootco.de -d www.rootco.de
 ```
-The wizard automatically detected I was running openSUSE, installed a few packages it needed, then asked me for an email address, and that was it! I had my certificate created and on my server at `/etc/letsencrypt/live/rootco.de/fullchain.pem`. I followed the advice to backup `/etc/letsencrypt` as it constains lots of important configuration and the certificates/keys for my system. Now I had to get Apache to actually use the certificate.
+The wizard automatically detected I was running openSUSE, installed a few packages it needed, then asked me for an email address, and that was it! I had my certificate created and on my server at `/etc/letsencrypt/live/rootco.de/fullchain.pem`. I followed the advice to backup `/etc/letsencrypt` as it contains lots of important configuration and the certificates/keys for my system. Now I had to get Apache to actually use the certificate.
 
 ## Configuring Apache on Leap for LetsEncrypt
 
