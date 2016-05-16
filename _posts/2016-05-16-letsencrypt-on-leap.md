@@ -4,9 +4,10 @@ title: LetsEncrypt on openSUSE Leap
 subtitle: with a little help from SaltStack
 date: '2016-05-16 14:19:00'
 ---
-I've been running my personal blog on [rootco.de](http://rootco.de) for a few months now. The Server is a minimal install of [openSUSE Leap 42.1](https://software.opensuse.org/421/en) running on a nice physical machine hosted at the awesome [Hetzner](https://www.hetzner.de/en/), who offer openSUSE Leap as an Operating System on all of their Physical and Virtual Server Hosting. I use the standard [Apache](https://httpd.apache.org/) available in Leap, with [Jekyll](https://jekyllrb.com/) to generate this blog. You can actually see the source to this [Jekyll blog on GitHub](https://github.com/sysrich/rootco.de-web). And to manage it all I use the awesome [SaltStack](https://saltstack.com/) and keep all of my [Salt configuration in GitHub also](https://github.com/sysrich/salt-states) so you can see exactly how my system is setup.
+I've been running my personal blog on [rootco.de](http://rootco.de) for a few months now. The server is a minimal install of [openSUSE Leap 42.1](https://software.opensuse.org/421/en) running on a nice physical machine hosted at the awesome [Hetzner](https://www.hetzner.de/en/), who offer openSUSE Leap as an OS on all of their Physical and Virtual server hosting. I use the standard [Apache](https://httpd.apache.org/) available in Leap, with [Jekyll](https://jekyllrb.com/) to generate this blog. You can actually see the source to this [Jekyll blog on GitHub](https://github.com/sysrich/rootco.de-web). And to manage it all I use the awesome [SaltStack](https://saltstack.com/) and keep all of my [Salt configuration in GitHub also](https://github.com/sysrich/salt-states) so you can see exactly how my system is setup.
 
-Why am I sharing all of this? Well this weekend there was something I needed to fix. http://rootco.de was running without **HTTPS**.
+Why am I sharing all of this? Well this weekend there was something I needed to fix.  
+http://rootco.de was running without **HTTPS**.
 
 ## So What?
 This site is a blog about Free Software & Open Source stuff, why on earth does it need to be running HTTPS?.
@@ -69,9 +70,9 @@ With that set, I went about setting up an Apache vhost configuration for SSL on 
 	ErrorLog /var/log/apache2/error_log
 	TransferLog /var/log/apache2/access_log
 	SSLEngine on
-	# Path to the LetsEncrypt created certificate fullchain.pem
-        SSLCertificateFile /etc/letsencrypt/live/rootco.de/fullchain.pem 
-        # Path to the LetsEncrypt created private key privkey.pem
+	Path to the LetsEncrypt created certificate fullchain.pem
+	SSLCertificateFile /etc/letsencrypt/live/rootco.de/fullchain.pem 
+	# Path to the LetsEncrypt created private key privkey.pem
 	SSLCertificateKeyFile /etc/letsencrypt/live/rootco.de/privkey.pem
 	CustomLog /var/log/apache2/ssl_request_log   ssl_combined
 </VirtualHost>
