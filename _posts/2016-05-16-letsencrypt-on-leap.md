@@ -50,7 +50,8 @@ $ salt 'luke.rootco.de' state.highstate --state-output=changes
 I then sanity checked the contents of `/opt/certbot` before proceeding. I really hate randomly downloading code from GitHub, so I spent a bit of time making sure what I downloaded made sense and matched what I expected, while wishing someone would take the time to package this up on the [openSUSE Build Service](https://build.opensuse.org) so I could trust them and stop worrying. Once I was happy, I ran the following command to request a certificate for `rootco.de` and `www.rootco.de`:
 
 ```shell
-$ /opt/certbot/certbot-auto certonly --webroot -w /srv/www/htdocs -d rootco.de -d www.rootco.de
+$ /opt/certbot/certbot-auto certonly --webroot -w /srv/www/htdocs \
+-d rootco.de -d www.rootco.de
 ```
 The wizard automatically detected I was running openSUSE, installed a few packages it needed, then asked me for an email address, and that was it! I had my certificate created and on my server at `/etc/letsencrypt/live/rootco.de/fullchain.pem`. I followed the advice to backup `/etc/letsencrypt` as it constains lots of important configuration and the certificates/keys for my system. Now I had to get Apache to actually use the certificate.
 
