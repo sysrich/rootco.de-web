@@ -29,7 +29,7 @@ $ ./certbot-auto --help
 
 As I'm actually using SaltStack to manage my system, all I did instead was add the following to my Salt State for the rootco.de Web Server.
 
-```YAML
+```yaml
 certbot:
   git.latest:
     - name: https://github.com/certbot/certbot
