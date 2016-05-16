@@ -65,7 +65,7 @@ $ a2enflag SSL
 
 With that set, I went about setting up an Apache vhost configuration for SSL on rootco.de:
 
-```Apache
+```apache
 <VirtualHost _default_:443>
 	DocumentRoot "/srv/www/htdocs"
 	ErrorLog /var/log/apache2/error_log
