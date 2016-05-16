@@ -21,7 +21,7 @@ I started as anyone should, by reading [the Getting Started Guide](https://letse
 As there is not (yet) a `certbot` package for openSUSE Leap, I had to use the `certbot-auto` wrapper script.  
 The documentation recommends you install it using the following commands:
 
-```bash
+```shell
 $ git clone https://github.com/certbot/certbot
 $ cd certbot
 $ ./certbot-auto --help
@@ -40,7 +40,7 @@ You can see the [git commit HERE](https://github.com/sysrich/salt-states/commit/
 
 I then ran the following on my salt master to tell SaltStack to pull down the changes and apply them to the rootco.de Web Server.
 
-```bash
+```shell
 $ git -C /srv/salt pull 
 $ salt 'luke.rootco.de' state.highstate --state-output=changes
 ```
@@ -49,7 +49,7 @@ $ salt 'luke.rootco.de' state.highstate --state-output=changes
 
 I then sanity checked the contents of `/opt/certbot` before proceeding. I really hate randomly downloading code from GitHub, so I spent a bit of time making sure what I downloaded made sense and matched what I expected, while wishing someone would take the time to package this up on the [openSUSE Build Service](https://build.opensuse.org) so I could trust them and stop worrying. Once I was happy, I ran the following command to request a certificate for `rootco.de` and `www.rootco.de`:
 
-```bash
+```shell
 $ /opt/certbot/certbot-auto certonly --webroot -w /srv/www/htdocs -d rootco.de -d www.rootco.de
 ```
 The wizard automatically detected I was running openSUSE, installed a few packages it needed, then asked me for an email address, and that was it! I had my certificate created and on my server at `/etc/letsencrypt/live/rootco.de/fullchain.pem`. I followed the advice to backup `/etc/letsencrypt` as it constains lots of important configuration and the certificates/keys for my system. Now I had to get Apache to actually use the certificate.
@@ -58,13 +58,13 @@ The wizard automatically detected I was running openSUSE, installed a few packag
 
 Because I was a little rusty, I reminded myself of the [openSUSE Leap Apache Documentation](https://doc.opensuse.org/documentation/leap/reference/html/book.opensuse.reference/cha.apache2.html#sec.apache2.ssl.configuration). Good thing too, because I can completely forgotten that to tell Apache to use SSL you needed to run the following command:
 
-```bash
+```shell
 $ a2enflag SSL
 ```
 
 With that set, I went about setting up an Apache vhost configuration for SSL on rootco.de:
 
-```ApacheConf
+```Apache
 <VirtualHost _default_:443>
 	DocumentRoot "/srv/www/htdocs"
 	ErrorLog /var/log/apache2/error_log
@@ -80,7 +80,7 @@ With that set, I went about setting up an Apache vhost configuration for SSL on 
 
 Now, because I absolutely hate making any change to the rootco.de Server directly and want everything managed by SaltStack, I actually put this in my Salt States folder, and modified the rootco.de Web Server state to automatically deploy the file to the appropriate place on the server. You can see [the git commit for that HERE](https://github.com/sysrich/salt-states/commit/ab3b8fcc6aeae57c02f2ad40cb423a0e6a65a579). As I am impaitent and didn't want to wait for my automatic deployment, I again manually refreshed the Salt States on my master and used salt to deploy this new configuration:
 
-```bash
+```shell
 $ git -C /srv/salt pull 
 $ salt 'luke.rootco.de.' state.highstate --state-output=changes
 ```
@@ -92,13 +92,13 @@ LetsEncrypt certificates have a duration of 90 days. I want https://rootco.de to
 
 The LetsEncrypt Documentation talked about a `renew` function so I gave it a quick try:
 
-```bash
+```shell
 $ /opt/certbot/certbot-auto renew --dry-run
 ```
 
 This seemed to work fine so I added a simple cron job to run the following every 60 days:
 
-```bash
+```shell
 $ /opt/certbot/certbot-auto renew >/dev/null 2>&1
 ```
 
