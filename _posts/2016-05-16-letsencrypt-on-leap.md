@@ -71,7 +71,7 @@ With that set, I went about setting up an Apache vhost configuration for SSL on 
 	ErrorLog /var/log/apache2/error_log
 	TransferLog /var/log/apache2/access_log
 	SSLEngine on
-	Path to the LetsEncrypt created certificate fullchain.pem
+	# Path to the LetsEncrypt created certificate fullchain.pem
 	SSLCertificateFile /etc/letsencrypt/live/rootco.de/fullchain.pem 
 	# Path to the LetsEncrypt created private key privkey.pem
 	SSLCertificateKeyFile /etc/letsencrypt/live/rootco.de/privkey.pem
