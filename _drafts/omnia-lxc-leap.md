@@ -18,7 +18,7 @@ systemctl disable auditd.service
 rm /usr/lib/modules-load.d/sg.conf
 
 #Nice and clean
-Gave k2so a static lease
+Gave k2so a static lease 32:57:60:10:58:23
 Removed the mountpoint for /mnt/data from router - datadisk is 100% k2so's, not Omnias
 zypper in --no-recommends salt-minion
 echo "144.76.82.9 salt salt.rootco.de" >> /etc/hosts
