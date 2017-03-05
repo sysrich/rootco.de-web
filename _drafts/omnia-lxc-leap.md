@@ -29,7 +29,7 @@ Highstate
 
 TODO - encrypt and configure disk
 blocked by device not visible in lxc, fixed with echo "lxc.cgroup.devices.allow = b 8:16 rwm" to container conf
-mknod 644 /dev/sdb b 8 16
+mknod -m 644 /dev/sdb b 8 16
 GOT STUCK ^^^ to fix I think
 http://lxc-users.linuxcontainers.narkive.com/qOC3Oqq5/adding-a-host-block-device-to-a-container
 FRESH LXC container would be nice!
