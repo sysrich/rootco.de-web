@@ -27,13 +27,40 @@ systemctl enable salt-minion
 systemctl start salt-minion
 Highstate
 
-TODO - encrypt and configure disk
-blocked by device not visible in lxc, fixed with echo "lxc.cgroup.devices.allow = b 8:16 rwm" to container conf
-mknod -m 644 /dev/sdb b 8 16
-GOT STUCK ^^^ to fix I think
-http://lxc-users.linuxcontainers.narkive.com/qOC3Oqq5/adding-a-host-block-device-to-a-container
-FRESH LXC container would be nice!
+#encrypt and configure disk
+blocked by device not visible in lxc, fixed with container conf
 
+# rootco.de configuration
+lxc.cgroup.devices.allow = b 8:16 rwm
+lxc.cgroup.devices.allow = b 8:17 rwm
+lxc.cgroup.devices.allow = c 10:234 rwm
+lxc.hook.start = /usr/local/bin/lxc-hook-sdb
+
+<!--FIX ME . THIS SHOULD BE IN SALT FOR K2SO-->
+/srv/lxc/k2so/rootfs/usr/local/bin/lxc-hook-sdb
+  #!/bin/sh
+  mknod -m 644 /dev/sdb b 8 16
+  mknod -m 644 /dev/sdb1 b 8 17
+  # needed for btrfs
+  mknod /dev/btrfs-control c 10 234
+
+Installing btrfsprogs,cryptsetup,snapper from salt state
+Can't use YaST because it scans using btrfsprogs which causes a crash as lxc doesn't own it's root btrfs fs
+zypper rm yast2
+
+cryptsetup luksFormat /dev/sdb1
+cryptsetup open --type luks /dev/sdb1 backups
+mkfs.btrfs /dev/mapper/backups
+cryptsetup close backups
+
+TODO - proper decrypt method
+echo "backups UUID=328dd1df-4df5-498d-b0c5-02c19700d335  none" >> /etc/crypttab
+echo "/dev/mapper/backups  /backups  btrfs  defaults 0 0" >> /etc/fstab
+
+TODO - PROPER SUBVOLUME AND SNAPPER CONFIG
 TODO - backup router config to obiwan/k2so
-TODO - csync
+TODO - csync crons
 TODO - little script on omnia to make sure LXC container is running and light up User1 accordingly
+  Blue flashing - container booting - set by lxc start-script on omnia
+  Green - container booted - set by container after boot
+  Red flashing - container broken - set by a monitor script on omnia
