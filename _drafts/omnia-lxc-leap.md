@@ -34,10 +34,10 @@ blocked by device not visible in lxc, fixed with container conf
 lxc.cgroup.devices.allow = b 8:16 rwm
 lxc.cgroup.devices.allow = b 8:17 rwm
 lxc.cgroup.devices.allow = c 10:234 rwm
-lxc.hook.start = /usr/local/bin/lxc-hook-sdb
+lxc.hook.start = /usr/local/sbin/lxc-hook-sdb
 
-<!--FIX ME . THIS SHOULD BE IN SALT FOR K2SO-->
-/srv/lxc/k2so/rootfs/usr/local/bin/lxc-hook-sdb
+BELOW PUSHED BY SALT
+/srv/lxc/k2so/rootfs/usr/local/sbin/lxc-hook-sdb
   #!/bin/sh
   mknod -m 644 /dev/sdb b 8 16
   mknod -m 644 /dev/sdb1 b 8 17
@@ -48,19 +48,53 @@ Installing btrfsprogs,cryptsetup,snapper from salt state
 Can't use YaST because it scans using btrfsprogs which causes a crash as lxc doesn't own it's root btrfs fs
 zypper rm yast2
 
+BELOW PUSHED BY SALT
 cryptsetup luksFormat /dev/sdb1
 cryptsetup open --type luks /dev/sdb1 backups
 mkfs.btrfs /dev/mapper/backups
-cryptsetup close backups
+mount /dev/mapper/backups /backups
+btrfs subvolume create /backups/@
+btrfs subvolume list /backups (@ should be 257)
+btrfs subvolume set-default 257 /backups
+umount /backups
+mount /dev/mapper/backups /backups
+snapper -c backups create-config /backups
+vi /etc/snapper/configs/backups
 
-TODO - proper decrypt method
-echo "backups UUID=328dd1df-4df5-498d-b0c5-02c19700d335  none" >> /etc/crypttab
-echo "/dev/mapper/backups  /backups  btrfs  defaults 0 0" >> /etc/fstab
+BELOW PUSHED BY SALT
+TODO - backup/manage with salt
+  TIMELINE_MIN_AGE="1800"
+  TIMELINE_LIMIT_HOURLY="12"
+  TIMELINE_LIMIT_DAILY="7"
+  TIMELINE_LIMIT_WEEKLY="4"
+  TIMELINE_LIMIT_MONTHLY="12"
+  TIMELINE_LIMIT_YEARLY="10"
 
-TODO - PROPER SUBVOLUME AND SNAPPER CONFIG
-TODO - backup router config to obiwan/k2so
-TODO - csync crons
-TODO - little script on omnia to make sure LXC container is running and light up User1 accordingly
+snapper -c backups create --description "TEST filesystem snapshot"
+snapper -c backups delete 1
+
+DONE - little scripts on omnia to make sure LXC container is running and light up User1 accordingly
   Blue flashing - container booting - set by lxc start-script on omnia
-  Green - container booted - set by container after boot
+    Done - /etc/lxc-bootnotify
+  White - container booted - set by container after boot
+    Done - /usr/local/sbin/backer-unlock
   Red flashing - container broken - set by a monitor script on omnia
+    Done - /etc/lxc-alarm + cron
+
+/etc/config/lxc-auto
+  config container
+        option name k2so
+        option timeout 60
+
+Profile.local to warn when /backups not mounted
+  
+DONE - proper decrypt method and/or script to decrypt with backer-unlock
+
+TODO - as backups will be pushed from root on obiwan and others generate root ssh private keys for all hosts in salt, and have those public keys on k2so via salt
+TODO - create new users for backer on k2so, one for csync, rsync, use system root keys to auth to them, use command= to lock down each http://superuser.com/questions/261361/do-i-need-to-have-a-passphrase-for-my-ssh-rsa-key
+
+TODO - backup script to create router config to obiwan/k2so
+TODO - restore script for router config
+TODO - backup k2so + restore script
+TODO - csync/rsync crons - csync of home takes a few minutes
+
