@@ -90,11 +90,14 @@ Profile.local to warn when /backups not mounted
   
 DONE - proper decrypt method and/or script to decrypt with backer-unlock
 
-TODO - as backups will be pushed from root on obiwan and others generate root ssh private keys for all hosts in salt, and have those public keys on k2so via salt
+TODO - as backups will be pushed from root user on obiwan and others generate root ssh private keys for all hosts in salt, and have those public keys on k2so via salt
 TODO - create new users for backer on k2so, one for csync, rsync, use system root keys to auth to them, use command= to lock down each http://superuser.com/questions/261361/do-i-need-to-have-a-passphrase-for-my-ssh-rsa-key
 
 TODO - backup script to create router config to obiwan/k2so
+INVERT THE BELOW - was a pull just to be done quickly as keys hadn't been setup yet.
+rsync -a --info=progress2 root@192.168.1.1:/etc/ etc
+rsync -a --info=progress2 root@192.168.1.1:/srv/lxc lxc
 TODO - restore script for router config
 TODO - backup k2so + restore script
 TODO - csync/rsync crons - csync of home takes a few minutes
-
+TODO - set boot notify to work inside LXC container, not omnia, omnia won't work when rebooting container
