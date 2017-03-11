@@ -103,5 +103,12 @@ rsync -a --info=progress2 root@192.168.1.1:/srv/lxc lxc
 TODO - restore script for router config
 TODO - backup k2so + restore script
 TODO - csync/rsync crons - csync of home takes a few minutes
+TODO - rsync /etc from all hosts
+TODO - rsync /srv from k2so
+TODO - rsync /var/lib/znc/.znc/configs/znc.conf from all znc hosts
+TODO - deploy znc.conf automagically to all znc hosts - REQUIRES PILLARS for passwords eg /var/lib/znc/.znc/users/ilmehtar/networks/freenode/moddata/sasl
 TODO - set boot notify to work inside LXC container, not omnia, omnia won't work when rebooting container
 TODO - Salt proxy from k2so to c3po
+TODO - Make rootco.de authorative salt master, not github
+TODO - Encrypt rootco.de /data, use it to store pillars
+TODO - pillars should contain info to correctly encrypt data partitions for k2so, luke, iwreckit, and obiwan when reinstalled
