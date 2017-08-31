@@ -73,8 +73,8 @@ snapper -c backups create --description "TEST filesystem snapshot"
 snapper -c backups delete 1
 
 DONE - little scripts on omnia to make sure LXC container is running and light up User1 accordingly
-  Blue flashing - container booting - set by lxc start-script on omnia
-    Done - /etc/lxc-bootnotify
+  Blue flashing - container booting - set by monitor script on lxc container
+    Done - /usr/local/sbin/backer-alarm + cron
   White - container booted - set by container after boot
     Done - /usr/local/sbin/backer-unlock
   Red flashing - container broken - set by a monitor script on omnia
@@ -89,10 +89,11 @@ Profile.local to warn when /backups not mounted
   
 DONE - proper decrypt method and/or script to decrypt with backer-unlock
 
-TODO - create new users for backer on k2so, one for csync, rsync, use system root-level keys to auth to them, use command= to lock down each http://superuser.com/questions/261361/do-i-need-to-have-a-passphrase-for-my-ssh-rsa-key
+DONE - create new users for backer on k2so, one for csync, rsync, use system root-level keys to auth to them, use command= to lock down each http://superuser.com/questions/261361/do-i-need-to-have-a-passphrase-for-my-ssh-rsa-key
 command="$HOME/bin/rrsync -ro ~/backups/",no-agent-forwarding,no-port-forwarding,no-pty,no-user-rc,no-X11-forwarding
+csync needs access to /usr/local/bin/sftp-server as its command
 
-TODO - as backups will be pushed fromroot-level user on obiwan and others generate ssh private keys for all hosts in salt, and have those public keys on k2so via salt
+DONE - as backups will be pushed fromroot-level user on obiwan and others generate ssh private keys for all hosts in salt, and have those public keys on k2so via salt
 ssh-keygen -N "" -f /root/.ssh/id_rsa
 use salt mine to distribute keys https://docs.saltstack.com/en/latest/topics/mine/
 
@@ -103,11 +104,11 @@ rsync -a --info=progress2 root@192.168.1.1:/srv/lxc lxc
 TODO - restore script for router config
 TODO - backup k2so + restore script
 TODO - csync/rsync crons - csync of home takes a few minutes
-TODO - rsync /etc from all hosts
-TODO - rsync /srv from k2so
-TODO - rsync /var/lib/znc/.znc/configs/znc.conf from all znc hosts
+DONE - rsync /etc from all hosts
+DONE - rsync /srv from k2so
+DONE - rsync /var/lib/znc/.znc/configs/znc.conf from all znc hosts
+TODO - Deduplicate every week
 TODO - deploy znc.conf automagically to all znc hosts - REQUIRES PILLARS for passwords eg /var/lib/znc/.znc/users/ilmehtar/networks/freenode/moddata/sasl
-TODO - set boot notify to work inside LXC container, not omnia, omnia won't work when rebooting container
 TODO - Salt proxy from k2so to c3po
 TODO - Make rootco.de authorative salt master, not github
 TODO - Encrypt rootco.de /data, use it to store pillars
