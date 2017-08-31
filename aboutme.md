@@ -8,8 +8,8 @@ Hello! I'm Richard. This is my blog to comment about stuff related to my contrib
 
 I've used SUSE/openSUSE since 2003, finding myself helping out more and more as time went on.
 
-In 2013 I joined SUSE to work as a QA Engineer & Technical Lead for [openQA](http://openqa.opensuse.org)
-Since 2017, I now work at SUSE as a Linux Distribution Engineer, working on various distribution projects including [Kubic](https://github.com/kubic-project)
+In 2013 I joined SUSE to work as a QA Engineer & Technical Lead for [openQA](http://openqa.opensuse.org)   
+Since 2017, I now work at SUSE as a Linux Distribution Engineer, working on various distribution projects including [Kubic](https://github.com/kubic-project)   
 In addition I am Chairman of the openSUSE Project since 2014.
 
 I've done most work with openSUSE's <a title="openSUSE GNOME" href="http://en.opensuse.org/Portal:GNOME">GNOME</a>, <a title="openSUSE Marketing" href="http://en.opensuse.org/Portal:Marketing">Marketing</a>, and <a title="openSUSE Artwork" href="http://en.opensuse.org/Portal:Artwork">Artwork</a> teams, and generally causing trouble by trying to fix things wherever I think I can.
