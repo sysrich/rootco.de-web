@@ -55,9 +55,11 @@ With so many failures on a relatively small software selection, Flathub really, 
 
 As I played around with apps I got the feeling more and more that applications needed much tinkering and tuning to be able to fully support the Flatpak-way of doing things, and I think that is going to hold the Flatpak ecosystem back, unless tools like gnome-builder somehow become the predominant tooling for application development on Linux.
 
+I was also dreadfully dissapointed with the performance, with applications taking significantly longer to load on my GPD Pocket compared to the same app provided by openSUSE Tumbleweeds rpms. On faster machines I didn't notice, but it really put a dent in my idea of using Flatpaks for 'netbook' style usecases.
+
 So I see the potential there, but at the moment I'm left feeling it will be unrealised potential.
 
-With all that said, I'd like to extend a huge thank you to the folks in #flathub IRC on Freenode. They were very friendly, a huge help, and I do believe they will work hard to address these problems I bumped into. Who knows, I may even help them out, they certainly are a nice enough bunch that I feel obligated to do so even if I decide not to follow up on this concept of a "Kubic Desktop".
+With all that said, I'd like to extend a huge thank you to the folks in #flatpak IRC on Freenode. They were very friendly, a huge help, and I do believe they will work hard to address these problems I bumped into. Who knows, I may even help them out, they certainly are a nice enough bunch that I feel obligated to do so no matter what happens to the "Kubic Desktop".
 
 # Next Steps
 
