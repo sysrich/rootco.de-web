@@ -81,7 +81,9 @@ These instructions aren't for the faint of heart, but if you'd like to setup you
 * Choose to install a `Plain System`
 * Once installed and rebooted, login as root and run the following command; `zypper ar http://download.opensuse.org/tumbleweed/repo/oss tw-repo`
 * Edit `/etc/zypp/zypp.conf` and set `solver.onlyRequires = false`
-* Run `transactional-update pkg in patterns-gnome-gnome flatpak gsettings-backend-dconf` and then **reboot**
+* Run `transactional-update pkg in patterns-gnome-gnome flatpak gsettings-backend-dconf`
+* Accept any dependency warnings but choosing option `1` and deinstalling the problematic packages
+* Once installed then **reboot** - transactional updates don't apply until the next reboot.
 * Once rebooted, run the following commands
   - `systemctl set-default graphical` to set the system to boot into a graphical mode in the future
   - `useradd -m $USERNAME` with `$USERNAME` being whatever you want your useraccount to be called to create a user account
