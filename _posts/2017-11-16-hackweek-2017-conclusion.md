@@ -47,7 +47,7 @@ But as originally planned, [Flatpak](http://flatpak.org) seemed to have the answ
 
 # "Everything is possible if you think in Opportunities"
 
-The famous slogan of the international purveyor of furniture in flat-packed form, [Ikea](http://ikea.com), is really appropriate for Flatpak.
+The slogan attributed to the international purveyor of furniture in flat-packed form, [Ikea](http://ikea.com), is really appropriate for Flatpak.
 
 After a few days of playing with Flatpaks, I'm starting to see the opportunities and possibilities. It was really nice to be able to easily install [Atom](https://atom.io), [Signal](https://signal.org), and more with ease, when due to issues like licenses & crazy build environment requirements we haven't (yet) been able to offer that software as part of openSUSE Tumbleweed.
 
