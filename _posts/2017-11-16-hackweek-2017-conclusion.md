@@ -65,7 +65,7 @@ With all that said, I'd like to extend a huge thank you to the folks in #flatpak
 
 # Next Steps
 
-As you will see from the instructions below, installing your own Kubic Desktop isn't a trivial process at the moment. If I have time, or if others feel like moving this idea forward wit me, we really need to look into the following:
+As you will see from the instructions below, installing your own Kubic Desktop isn't a trivial process at the moment. If I have time, or if others feel like moving this idea forward with me, we really need to look into the following:
 
 - Polishing the Product & Image definitions in OBS for Kubic to remove as many of the installation steps below as possible. This would either mean extending the existing images & installation routine to support a Kubic desktop, or producing new images for a Kubic desktop.
 - As part of the above, remove the conflicts that stop additional patterns being installed with the openSUSE-TW-Kubic product.
