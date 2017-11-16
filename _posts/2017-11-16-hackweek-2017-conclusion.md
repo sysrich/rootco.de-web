@@ -10,7 +10,9 @@ Well it's over, SUSE's 16th [hackweek](https://hackweek.suse.com). Here's a quic
 
 I had a few small things on my list to look at. I didn't get around to look at [WeKan](https://wekan.github.io/), but I understand other colleagues did and got it working on [openSUSE](https://www.opensuse.org). I plan to learn from them about whether or not the tool has much potential for my user cases.
 
-I did get around to having fun with the large interactive whiteboard in SUSE's Nürnberg office. Working with a bunch of colleagues we had a lot of fun, first booting it with [SLE 15 Beta 2](https://www.suse.com/betaprogram/sle-beta/) but deciding that running an Enterprise operating system wasn't really the best idea and replacing that with openSUSE Tumbleweed. We found both Linux distributions booted a lot faster than Windows and had exceptionally good support for all of the involved hardware (including the touchscreen). However, just like Windows, it seems with this specific embedded system in the touch screen, we couldn't get the embedded HDMI interface to set the resolution to 4K, despite the screen supporting 4K.
+I did get around to having fun with the large interactive whiteboard in SUSE's Nürnberg office. Working with a bunch of colleagues we had a lot of fun, first booting it with [SLE 15 Beta 2](https://www.suse.com/betaprogram/sle-beta/) but deciding that running an Enterprise operating system wasn't really the best idea and replacing that with openSUSE Tumbleweed.
+
+We found both Linux distributions booted a lot faster than Windows and had exceptionally good support for all of the involved hardware (including the touchscreen). However, just like Windows, it seems with this specific embedded system in the touch screen, we couldn't get the embedded HDMI interface to set the resolution to 4K, despite the screen supporting 4K.
 Given this wouldn't work in either Windows or *SUSE Linux after a day of hacking around we gave up and the screen is likely to be sent back to the manufacturer.
 
 # What about Kubic Desktop?
