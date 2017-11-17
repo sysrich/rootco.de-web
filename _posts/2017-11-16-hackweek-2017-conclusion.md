@@ -102,10 +102,10 @@ These instructions aren't for the faint of heart, but if you'd like to setup you
   - `gsettings set org.gnome.software allow-updates false`
   - `gsettings set org.gnome.software download-updates false`
   - `gsettings set org.gnome.software enable-software-sources false`
-  - `gsettings set org.gnome.software first-run false`
+  - `gsettings set org.gnome.software first-run true`
   - `flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
 * Now load up "Software" in GNOME and enjoy your experimental Kubic Desktop experience
-* To update the system just run `transactional-update dup` as root, or ideally put it in a cron job and forget about it and trust it to do everything automatically for you
+* To update the system just run `transactional-update dup` as root, or ideally put it in a cron job/systemd timer and forget about it and trust it to do everything automatically for you
 
 If you are interested in working on this idea and taking it beyond the fun little experiments I've started here, please feel free to get in touch using the links at the bottom of this blog.
 
