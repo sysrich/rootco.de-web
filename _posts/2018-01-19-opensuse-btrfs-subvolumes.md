@@ -11,7 +11,7 @@ However this does lead to complications for some advanced users who wish to recr
 
 The below steps are the steps to manually create an openSUSE-style btrfs partition believed to be correct at time of writing (19 Jan 2018).
 
-This guide should be valid for **openSUSE Tumbleweed 20180117**, **openSUSE Leap 15**, and **SUSE Linux Enterprise 15** or later. However care should be taken to double check for new or removed subvolumes in SUSE distributions as this document gets older.
+This guide should be valid for **openSUSE Tumbleweed 20180117**, **openSUSE Leap 15**, and **SUSE Linux Enterprise 15** or later. However care should be taken to double check for new or removed subvolumes in *SUSE distributions as this document gets older.
 
 Older versions of SUSE distributions will need to adjust these instructions to handle the [old /var/* subvolume layout](https://en.opensuse.org/SDB:BTRFS#Old_.2Fvar.2F.2A_subvolume_layout_.28pre_Jan_2018.29) previously used.
 
