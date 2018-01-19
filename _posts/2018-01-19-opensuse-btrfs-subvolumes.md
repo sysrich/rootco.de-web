@@ -5,7 +5,7 @@ date: '2018-01-19 09:54:10'
 ---
 openSUSE's [YaST](https://yast.github.io) installer creates a detailed btrfs root filesystem configuration that has been designed to be flexible and secure while still efficient when used with tools like [Snapper](https://snapper.io).
 
-One of the overriding requirements is to provide a clearly defined 'root filesystem' containing everything we care about for 'full system rollback' (facilitated by snapper), while using subvolumes to exclude everything we _do not_ want in the 'root filesystem' so snapper does not accidentally destroy user data when rolling back the system and it's applications. Details of our default subvolume layout can be found [on the openSUSE wiki](https://en.opensuse.org/SDB:BTRFS).
+One of the overriding requirements is to provide a clearly defined 'root filesystem' containing everything we care about for 'full system rollback' (facilitated by snapper), while using subvolumes to exclude everything we _do not_ want in the 'root filesystem' so snapper does not accidentally destroy user data when rolling back the system and its' applications. Details of our default subvolume layout can be found [on the openSUSE wiki](https://en.opensuse.org/SDB:BTRFS).
 
 However this does lead to complications for some advanced users who wish to recreate this manually, such as when doing complex system recovery, custom automated provisioning or other tinkering. (NOTE: for Full System Recovery it is often better to use a tool like [ReaR](https://en.opensuse.org/SDB:Disaster_Recovery)).
 
