@@ -112,6 +112,6 @@ mount /dev/sda1 /mnt/var -o subvol=@/var
 
 **11:** You're done, you've now successfully created an openSUSE-style btrfs root filesystem structure and mounted it for use. You can now use it for whatever you'd like, such as the manual injection of files from an existing openSUSE installation. 
 
-Once populated, care should be made to ensure the `/mnt/etc/fstab` also includes the appropriate entries for each of the subvolumes except `@/.snapshots/1/snapshot` which should not be mounted as it provides your initial installation system.
+Once populated, care should be made to ensure the `/mnt/etc/fstab` also includes the appropriate entries for each of the subvolumes except `@/.snapshots/1/snapshot` which should not be mounted as it provides your initial installed system.
 
 Have a lot of fun
