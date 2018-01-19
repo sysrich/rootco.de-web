@@ -7,11 +7,13 @@ openSUSE's [YaST](https://yast.github.io) installer creates a detailed btrfs roo
 
 However this does lead to complications for some advanced users who wish to recreate this manually, such as when doing complex system recovery, custom automated provisioning or other tinkering. (NOTE: for Full System Recovery it is often better to use a tool like [ReaR](https://en.opensuse.org/SDB:Disaster_Recovery)).
 
-The below steps are the steps to manually create an openSUSE-style btrfs partition correct at time of writing (19 Jan 2018).
+The below steps are the steps to manually create an openSUSE-style btrfs partition believed to be correct at time of writing (19 Jan 2018).
 
 This guide should be valid for **openSUSE Tumbleweed 20180117**, **openSUSE Leap 15**, and **SUSE Linux Enterprise 15** or later. However care should be taken to double check for new or removed subvolumes in SUSE distributions as this document gets older.
 
 Older versions of SUSE distributions will need to adjust these instructions to handle the [old /var/* subvolume layout](https://en.opensuse.org/SDB:BTRFS#Old_.2Fvar.2F.2A_subvolume_layout_.28pre_Jan_2018.29) previously used.
+
+It should go without saying that this guide should only be followed by people who feel that they know what they are doing. It's normally a lot easier to use openSUSE's default tools like YaST and ReaR.
 
 ## Step-by-Step
 
@@ -76,7 +78,9 @@ unmount /mnt
 mount /dev/sda1 /mnt
 ```
 
-**8:** You should be able to confirm the above worked by doing `ls /mnt` which should repond with an empty result. Congratulations, at this point the filesystem is 'created' with the create structure. But you need to know how to mount it properly to make use of it.
+**8:** You should be able to confirm the above worked by doing `ls /mnt` which should repond with an empty result.
+
+Congratulations, at this point the filesystem is 'created' with the correct structure. But you need to know how to mount it properly to make use of it.
 
 **9:** You now need to create a skeleton of the filesystem to mount all of our subvolumes
 
@@ -106,8 +110,8 @@ mount /dev/sda1 /mnt/usr/local -o subvol=@/usr/local
 mount /dev/sda1 /mnt/var -o subvol=@/var
 ```
 
-**11:** You're done, you've now successfully created an openSUSE-style btrfs root filesystem structure. You can now use it for whatever you'd like, such as the manual injection of files from an existing openSUSE installation. 
+**11:** You're done, you've now successfully created an openSUSE-style btrfs root filesystem structure and mounted it for use. You can now use it for whatever you'd like, such as the manual injection of files from an existing openSUSE installation. 
 
-Once populated, care should be made to ensure the `/etc/fstab` also includes the appropriate entries for each of the subvolumes except `@/.snapshots/1/snapshot` which should not be mounted as it provides your initial installation system.
+Once populated, care should be made to ensure the `/mnt/etc/fstab` also includes the appropriate entries for each of the subvolumes except `@/.snapshots/1/snapshot` which should not be mounted as it provides your initial installation system.
 
 Have a lot of fun
