@@ -47,6 +47,7 @@ btrfs subvolume create /mnt/@/boot/grub2/i386-pc
 btrfs subvolume create /mnt/@/boot/grub2/x86_64-efi
 btrfs subvolume create /mnt/@/home
 btrfs subvolume create /mnt/@/opt
+btrfs subvoulme create /mnt/@/root
 btrfs subvolume create /mnt/@/srv
 btrfs subvolume create /mnt/@/tmp
 mkdir /mnt/@/usr/
@@ -92,6 +93,7 @@ mkdir -p /mnt/boot/grub2/i386-pc
 mkdir -p /mnt/boot/grub2/x86_64-efi
 mkdir /mnt/home
 mkdir /mnt/opt
+mkdir /mnt/root
 mkdir /mnt/srv
 mkdir /mnt/tmp
 mkdir -p /mnt/usr/local
@@ -106,6 +108,7 @@ mount /dev/sda1 /mnt/boot/grub2/i386-pc -o subvol=@/boot/grub2/i386-pc
 mount /dev/sda1 /mnt/boot/grub2/x86_64-efi -o subvol=@/boot/grub2/x86_64-efi
 mount /dev/sda1 /mnt/home -o subvol=@/home
 mount /dev/sda1 /mnt/opt -o subvol=@/opt
+mount /dev/sda1 /mnt/root -o subvol=@/root
 mount /dev/sda1 /mnt/srv -o subvol=@/srv
 mount /dev/sda1 /mnt/tmp -o subvol=@/tmp
 mount /dev/sda1 /mnt/usr/local -o subvol=@/usr/local
