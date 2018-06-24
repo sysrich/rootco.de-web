@@ -1,6 +1,6 @@
 # --- Sysrich Options --- #
 # jekyll-paginate needed by Jekyll 3.0
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 # --- General options --- #
 
