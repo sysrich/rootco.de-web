@@ -1,0 +1,5 @@
+#!ipxe
+kernel http://download.opensuse.org/tumbleweed/repo/oss/boot/x86_64/loader/linux splash=silent install=http://download.opensuse.org/tumbleweed/repo/oss/
+initrd http://download.opensuse.org/tumbleweed/repo/oss/boot/x86_64/loader/initrd
+boot
+
