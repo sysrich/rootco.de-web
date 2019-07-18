@@ -17,7 +17,6 @@ I've done most work with openSUSE's <a title="openSUSE GNOME" href="http://en.op
 I also spend a lot of time in <a title="openSUSE IRC Channels" href="http://en.opensuse.org/openSUSE:IRC_list">openSUSE's IRC channels</a> on irc.freenode.org under the name sysrich (formerly ilmehtar)
 
 * <a title="Twitter - Sysrich" href="http://www.twitter.com/sysrich">My Twitter</a>
-* <a title="Google+" href="https://plus.google.com/+RichardBrownSYS">My Google+</a>
 * <a title="My GitHub Profile" href="https://github.com/sysrich">My GitHub Profile</a>
 * <a title="My LinkedIn Profile" href="http://uk.linkedin.com/in/sysrich">My LinkedIn Profile</a>
 * <a title="openSUSE Connect" href="https://connect.opensuse.org/pg/profile/RBrownCCB">My openSUSE Connect Profile</a>
