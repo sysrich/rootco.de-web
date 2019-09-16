@@ -20,7 +20,7 @@ I also spend a lot of time in <a title="openSUSE IRC Channels" href="http://en.o
 * <a title="My GitHub Profile" href="https://github.com/sysrich">My GitHub Profile</a>
 * <a title="My LinkedIn Profile" href="http://uk.linkedin.com/in/sysrich">My LinkedIn Profile</a>
 * <a title="openSUSE Connect" href="https://connect.opensuse.org/pg/profile/RBrownCCB">My openSUSE Connect Profile</a>
-* <a title="My Instagram" href="https://instagram.com/sysrich">My Instagram"</a>
+* <a title="My Instagram" href="https://instagram.com/sysrich">My Instagram</a>
 
 This theme is based on beautiful-jekyll by [Dean Attali](http://deanattali.com/beautiful-jekyll/)   
 The openSUSE version of the beautiful-jekyll theme can be found on [GitHub](https://github.com/sysrich/beautiful-jekyll-opensuse)   
