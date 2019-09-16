@@ -60,7 +60,7 @@ footer-links-active:
   twitter: true
   github: true
   linkedin: true
-  googleplus: true
+  googleplus: false
   stackoverflow: false
 
 # How to display the link to the website in the footer
