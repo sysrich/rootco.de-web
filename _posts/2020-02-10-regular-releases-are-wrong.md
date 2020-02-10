@@ -10,7 +10,7 @@ For those who don't already know, [openSUSE](https://www.opensuse.org) is a Linu
 * *Leap* is what is known as a a **Regular Release**, in that it does have specific versions (e.g.. 15.0, 15.1, 15.2) released in a regular cadence. In Leap's case, this is annually. Leap is a variation of the Regular Release known as an **LTS Release** because each of those 'minor versions' (X.1, .2, .3) are intended to include only minor changes, with a major new version (e.g.. 16.0) expected only every few years. 
 
 It's a [long documented fact](https://rootco.de/2016-03-28-why-use-tumbleweed/) that I am a big proponent of Rolling Releases and use them as my main operating system for Work & Play on my Desktops/Laptops.  
-However in the 4 years since writing that last blog post I always a number of Leap machines in my life, mostly running as servers.  
+However in the 4 years since writing that last blog post I always had a number of Leap machines in my life, mostly running as servers.  
 
 As of today, my last Leap machine is no more, and I do not foresee ever going back to Leap or any Linux distribution like it.
 
