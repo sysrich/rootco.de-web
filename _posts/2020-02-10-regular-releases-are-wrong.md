@@ -86,7 +86,7 @@ Once they're working I don't want to have to patch them, reboot them, touch them
 Tumbleweed is made up of over 15,000 packages, all moving at the rate of contribution. Worse, Tumbleweed is designed as a *multi-purpose* operating system.  
 You can quite happily set it up to be a *mail server, web server, proxy server, virtualisation host, and heck, why not even a desktop* **all at the same time**.  
 This is one of Tumbleweed's greatest strengths, but in this case it is also a weakness.  
-openSUSE has to make sure all these things could possibly work together. That often means installing 'recommended packages' on a system than absolutely necessary, 'just-in-case' the user wants to use all the possible features their combination of packages could possibly allow.  
+openSUSE has to make sure all these things could possibly work together. That often means installing more 'recommended packages' on a system than absolutely necessary, 'just-in-case' the user wants to use all the possible features their combination of packages could possibly allow.  
 And with this complexity comes an increase of risk, and an increase of updates, which themselves bring yet more risk. Perfectly fine for my desktop (for now), but that's far too much work for a Server, especially when I typically need a Server to **just do one job**. 
 
 # Minimal Risk, Maximum Benefits with openSUSE MicroOS
