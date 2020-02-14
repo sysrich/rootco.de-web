@@ -43,7 +43,7 @@ Firstly, whether the change is a security update or a new feature, that change i
 Therefore, the nature of the change has to be looked at. *"Is this change too risky?"* is a common question, and quite often highly desired features take years to deliver in regular releases because the answer is *"yes"*.
 
 When changes are made, they are made with the intention of minimising the risks introduced by changing the existing software. That often means avoiding updating software to an entirely new **version** but instead opting to **backport** the smallest necessary amounts of code and merging them with (often much) older versions already in the Regular Release. 
-We call these patches, or updates, or maintenance updates, but we avoid referring them to what they really are ... **fraken-software**
+We call these patches, or updates, or maintenance updates, but we avoid referring them to what they really are ... **franken-software**
 
 ![franken-software](/pics/frankensoftware.png)
 
