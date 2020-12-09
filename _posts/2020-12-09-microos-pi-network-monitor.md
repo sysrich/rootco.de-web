@@ -45,7 +45,7 @@ And that's it, the SDCard is ready to go...or is it?
 
 # But Wait!
 
-By default, MicroOS images have no root password, no user accounts, and nothing installed on it to let you run services. I needed to have some way to setup the Pi when it first boots from the SDCard. MicroOS has two tools available for such first boot configuration:
+By default, MicroOS images have no root password, no user accounts, and no services installed. I needed to have some way to setup the Pi when it first boots from the SDCard. MicroOS has two tools available for such first boot configuration:
 
 * [Ignition](https://en.opensuse.org/Portal:MicroOS/Ignition), originally from [CoreOS](https://coreos.com/ignition/docs/latest/) which has a lovely structured JSON config but a limited scope of what it can setup.
 * [Combustion](https://en.opensuse.org/Portal:MicroOS/Combustion), written specifically for MicroOS and capable of doing anything you can write in a shell script.
