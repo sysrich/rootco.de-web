@@ -8,7 +8,7 @@ date: '2020-12-09 12:42:55'
 
 * A nice fanless Zotac x86-64 NUC running at home as my [Nextcloud](https://nextcloud.com) and ssh-based backup server/NAS
 * A VM on [Hetzner Cloud](https://www.hetzner.com/cloud) running this blog, my [saltstack master](https://saltstack.com) and a few other public facing services. *(Kudos to Hetzner for adding the openSUSE MicroOS ISO to the list of Cloud ISOs so I could do a custom installation)*
-* A VM on [Linode](https://www.linode.com) for running a US-based proxy for some of my friends who otherwise might have too-high latency accessing services on Hetzner host. *(Kudos to Linode for consistantly supporting openSUSE Leap releases on the day of release and providing ways of doing custom installs of any OS)*
+* A VM on [Linode](https://www.linode.com) for running a US-based proxy for some of my friends who otherwise might have too-high latency accessing services on the Hetzner host. *(Kudos to Linode for consistantly supporting openSUSE Leap releases on the day of release and providing ways of doing custom installs of any OS)*
 
 And so, with all these MicroOS boxes in my life, as reliable as they may be, I wanted to have a simple way of keeping an eye on whether or not the machines are up or not, possibly evolving to more interesting checks in the future. I wanted this to be able to monitor my machines even when my main laptop at home is off, and I wanted to not have to worry about updating the monitoring system at all. So an idea formed, **why not use MicroOS to monitor MicroOS?**
 
@@ -25,7 +25,7 @@ I cobbled this little project together out of random bits of hardware I had lyin
 
 # Software Used
 
-I found a very nice command-line visualisation tool called [sampler](https://sampler.dev) that perfectly fit my needs for this project. It's nice and small, lets you draw graphs based on numbers it gets from whatever shell commands you tell it to run at whatever frequency you tell it to run. It can also produce reports if the results do not match expected values. So given the basic monitoring I want is basically just a `ping` and be alerted if they stopped responding, `sampler` is absolutely perfect. I packaged it for openSUSE as part of this project so it's now available for regular Tumbleweed as well as MicroOS.
+I found a very nice command-line visualisation tool called [sampler](https://sampler.dev) that perfectly fit my needs for this project. It's nice and small, lets you draw graphs based on numbers it gets from whatever shell commands you run at whatever frequency you tell it to poll. It can also produce alerts if the results do not match expected values. So given the basic monitoring I want is basically just a `ping` and be alerted if they stopped responding, `sampler` is absolutely perfect. I packaged it for openSUSE as part of this project so it's now available for regular Tumbleweed as well as MicroOS.
 
 # Installing MicroOS on the SDCard
 
@@ -48,9 +48,9 @@ And that's it, the SDCard is ready to go...or is it?
 By default, MicroOS images have no root password, no user accounts, and nothing installed on it to let you run services. I needed to have some way to setup the Pi when it first boots from the SDCard. MicroOS has two tools available for such first boot configuration:
 
 * [Ignition](https://en.opensuse.org/Portal:MicroOS/Ignition), originally from [CoreOS](https://coreos.com/ignition/docs/latest/) which has a lovely structured JSON config but a limited scope of what it can setup.
-* [Combustion](https://en.opensuse.org/Portal:MicroOS/Combustion), written specifically for MicroOS and capable of doing anything you can write in a shell script
+* [Combustion](https://en.opensuse.org/Portal:MicroOS/Combustion), written specifically for MicroOS and capable of doing anything you can write in a shell script.
 
-As I already had a feeling I'd need to do some quirky things, especially to get the TFT display running, I opted to use `combustion`. I could have used `ignition` and `combustion` in combination but it seemed silly to me to have to learn how to write a new JSON config file when I could just as easily write those steps in a shell script.
+As I already had a feeling I'd need to do some quirky things, especially to get the TFT display running, I opted to use `combustion`. I could have used `ignition` for the easy stuff and left `combustion` in combination for the trickier parts but it seemed silly to me to have to learn how to write a new JSON config file when I could just as easily write everything in a shell script.
 
 # Preparing a combustion USB stick
 
@@ -127,7 +127,7 @@ umount /home
 
 The script references a number of additional files, all of which are placed alongside `script` in the `combustion` directory on the USB stick:
 
-**File Listing**
+**File Listing of the combustion directory**
 
 ```shell
 90-disableipv6.conf
