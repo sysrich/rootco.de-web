@@ -6,11 +6,13 @@ subtitle: Why you should find me interesting
 
 Hello! I'm Richard. This is my blog to comment about stuff related to my contributions to the <a title="openSUSE" href="http://www.openSUSE.org">openSUSE project</a>, my work for <a href="http://www.suse.com">SUSE Linux</a>, and occationally my other hobby of Photography.
 
+I am currently a Distributions Architect at SUSE, where I have worked in various roles since 2013, including QA Engineer, Technical Lead for openQA, and Linux Distribution Engineer.
+
 I've used SUSE/openSUSE since 2003, finding myself helping out more and more as time went on.
 
-In 2013 I joined SUSE to work as a QA Engineer & Technical Lead for [openQA](http://openqa.opensuse.org).  
-I was Chairman of the openSUSE Project from 2014 until 2019.  
-Since 2017, I now work as a Linux Distribution Engineer in SUSE's Future Technology Team, working on various distribution projects including [Kubic](https://kubic.opensuse.org).
+I've been intimately involved in many of openSUSE's most interesting projects over the years, including Evergreen, Leap, Tumbleweed, MicroOS and Kubic. I had the pleasure of being the openSUSE Project's Chairperson from 2014 until 2019.
+
+Most recently, I founded the MicroOS Desktop project, now known as [openSUSE Aeon](https://aeondesktop.org).
 
 I've done most work with openSUSE's <a title="openSUSE GNOME" href="http://en.opensuse.org/Portal:GNOME">GNOME</a>, <a title="openSUSE Marketing" href="http://en.opensuse.org/Portal:Marketing">Marketing</a>, and <a title="openSUSE Artwork" href="http://en.opensuse.org/Portal:Artwork">Artwork</a> teams, and generally causing trouble by trying to fix things wherever I think I can.
 
